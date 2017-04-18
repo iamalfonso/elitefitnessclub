@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('mainContent', {
+		templateUrl: "<%= asset_path('angular/components/main-content/main-content.html') %>",
+		controller: mainContentComponentController,
+		transclude: true		
+	});
+
+	mainContentComponentController.$inject = [];
+	function mainContentComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

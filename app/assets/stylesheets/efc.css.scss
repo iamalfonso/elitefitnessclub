@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-size: 20px;
 }
 
 .body {
@@ -76,8 +77,22 @@
 	background-color: #252525;
 }
 
+.segment {
+	padding: 100px 0px;	
+}
+
+.membresias-part {
+	background-color: #252525;
+}
+
 .gimnasio-part {
-	background-color: #f77777;	
+	background-color: #ffffff;	
+	h2 {
+		font-size: 1.8em;
+	}
+	p {
+		font-size: 0.8em;
+	}
 }
 
 #main-carousel {
@@ -97,6 +112,59 @@
 	left: 0;
 	min-width: 100%;
 	max-width: none;
+}
+
+.icon-gimnasio-segment {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.dumbbell-icon {
+	background-image: image-url("dumbbell_icon.png");
+}
+
+.cardio-icon {
+	background-image: image-url("cardio_icon.png");
+}
+
+.freeweights-icon {
+	background-image: image-url("freeweights_icon.png");
+}
+
+.title-on-dark {
+	color: #ffffff;
+	font-size: 2em;
+}
+
+.pricing {
+	background-color: #CF3046;
+	border-radius: 5px;
+	margin: 20px 0;
+	text-align: center;
+	.pricing-plan {
+		color: #ffffff;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	.pricing-price {
+		background-color: #ffffff;
+		font-size: 3em;
+		font-weight: bold;
+		color: #CF3046;
+	}
+	.pricing-list {
+		background-color: #ffffff;
+		border-radius: 5px;
+		padding-bottom: 15px;
+		list-style-type: none;
+		min-height: 150px;
+	}
+	.pricing-items {
+		background-color: #ffffff;
+		font-size: 0.8em;
+		color: #777777;
+	}
 }
 
 /* MEDIA QUERIES */

@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('membresiasSegment', {
+		templateUrl: "<%= asset_path('angular/components/membresias-segment/membresias-segment.html') %>",
+		controller: membresiasSegmentComponentController,
+		transclude: true		
+	});
+
+	membresiasSegmentComponentController.$inject = [];
+	function membresiasSegmentComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

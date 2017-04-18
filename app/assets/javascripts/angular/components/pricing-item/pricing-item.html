@@ -1,0 +1,14 @@
+<!-- Pricing Item -->
+<div class="pricing">
+	<div class="pricing-plan">
+		{{ $ctrl.plan }}
+	</div>
+	<div class="pricing-price">
+		{{ $ctrl.price | currency:"$":0 }} <span class="pricing-tag">{{ $ctrl.priceTag }}</span>
+	</div>
+	<div>
+		<ul class="pricing-list">
+			<li class="pricing-items" ng-repeat="item in $ctrl.items">{{ item }}</li>
+		</ul>
+	</div>	
+</div>
