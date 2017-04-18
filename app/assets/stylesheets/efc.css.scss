@@ -6,7 +6,7 @@
 
 .body {
 	font-family: 'Nunito', sans-serif;	
-	background-color: #333333;
+	background-color: #ffffff;
 }
 
 #logo-img {
@@ -72,11 +72,31 @@
 	display: none;
 }
 
-.carousel-container {
-	width: 100%; 
-	height: 600px;
-	margin: 0 auto;
-	overflow: hidden;
+.carousel-part {
+	background-color: #252525;
+}
+
+.gimnasio-part {
+	background-color: #f77777;	
+}
+
+#main-carousel {
+	width: 60%;
+	margin: auto;
+}
+
+#main-carousel .carousel .carousel-item {
+    height: 700px;
+}
+
+#main-carousel .carousel .carousel-item img {
+    margin: 0 auto; /* Align slide image horizontally center */
+    min-height: 300px;  
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	max-width: none;
 }
 
 /* MEDIA QUERIES */
