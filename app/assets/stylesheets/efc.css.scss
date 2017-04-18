@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.body {
+	font-family: 'Nunito', sans-serif;	
+	background-color: #333333;
+}
+
+#logo-img {
+	background: image-url("logo.png") no-repeat;
+	width: 154px;
+	height: 93px;
+	margin: 0px 0px 10px 0;
+}
+
+#header {
+  background-color: #000000;
+  border-radius: 0;
+  border: 0;
+  .top-contact{
+  	padding: 7px 0px;
+  	background-color: #ce021f;
+  	color: #ffffff;
+  	font-size: 0.8em;
+  	i {
+  		font-size: 1.2em;
+  	}
+  	.info {
+  		margin: 0px 20px 0px 10px;
+  	}
+  	a {
+  		color: #ffffff;
+  		text-decoration: none;
+  	}
+  }
+}
+
+#menu {
+	font-family: 'Changa', sans-serif;
+	li {
+		display: inline;
+		list-style-type: none;		
+	  	transition: 0.4s;
+	  	font-size: 1.4em;
+	  	padding: 0 10px;
+	  	margin: 0 10px;
+	  	&:hover {
+		  	background-color: #ffffff;
+		  	padding: 12px 10px;
+		  	color: #ce021f;
+	  	}
+	  	a {
+		  	color: #ffffff;
+		  	text-decoration: none;
+		  	text-transform: uppercase;
+		  	cursor: pointer;
+		  	&:hover {
+		  		color: #ce021f;
+		  	}	  		
+	  	}
+	}	
+	.active{
+		border-bottom: 3px solid #ce021f;
+		padding-bottom: 5px;
+	}
+}
+
+.toggler-icon {
+	display: none;
+}
+
+.carousel-container {
+	width: 100%; 
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  	#menu {
+	  	li {
+	  		font-size: 1.2em;  		
+	  	}
+  	}
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	#menu {
+	  	li {
+	  		font-size: 1em;
+	  		margin: 0 2px;
+		  	&:hover {
+			  	padding: 5px 10px;
+		  	}		  		
+	  	}
+	}
+	#logo-img {
+		background: image-url("logo_medium.png") no-repeat;
+		width: 100px;
+		height: 60px;
+	}  
+}
+
+/********** Small devices only **********/
+@media (min-width: 576px) and (max-width: 767px) {	
+	#mobile_menu {
+		text-align: center;
+		li {
+			display: block;
+			list-style-type: none;		
+		  	transition: 0.4s;
+		  	font-size: 0.8em;
+		  	padding-top: 3px;
+		  	margin: 0;
+		  	a {
+			  	color: #ffffff;
+			  	text-decoration: none;
+			  	text-transform: uppercase;
+			  	cursor: pointer;  		
+		  	}
+		}	
+		.active{
+			border-bottom: 2px solid #ce021f;
+			padding-bottom: 3px;
+			font-size: 1.2em;
+		}		
+	}
+	#mobile_menu_container {
+		display: none;
+	}
+	#logo-img {
+		background: image-url("logo_small.png") no-repeat;
+		width: 100px;
+		height: 60px;
+	}   
+	.toggler-icon {
+		display: inline;
+		color: #ffffff;
+		font-size: 2em;
+	}
+	#menu_container {
+		width: 97.5%;
+	}	
+}
