@@ -14,7 +14,6 @@
 //= require jquery/jquery-3.2.1.min
 //= require tether/tether.min
 //= require bootstrap/dist/js/bootstrap.min
-//= require scroll-animation
 //= require angular/angular.min
 //= require angular/efc
 //= require_tree ./angular/components

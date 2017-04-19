@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('clasesSegment', {
+		templateUrl: "<%= asset_path('angular/components/clases-segment/clases-segment.html') %>",
+		controller: clasesSegmentComponentController,
+		transclude: true		
+	});
+
+	clasesSegmentComponentController.$inject = [];
+	function clasesSegmentComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

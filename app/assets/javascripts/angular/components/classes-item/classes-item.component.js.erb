@@ -1,0 +1,28 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('classesItem', {
+		templateUrl: "<%= asset_path('angular/components/classes-item/classes-item.html.erb') %>",
+		controller: classesItemComponentController,
+		bindings: {
+			classesImg: '@',
+			classesName: '@'
+		},
+		transclude: true		
+	});
+
+	classesItemComponentController.$inject = [];
+	function classesItemComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();
