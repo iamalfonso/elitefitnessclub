@@ -1,0 +1,10 @@
+<%= form_tag({:controller => "contacts", :action => "index"}, :method => "get") do %>
+  <%= label_tag(:key, "Search for:") %>
+  <%= text_field_tag(:key) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% @contacts.each { |contact| %>
+	<%= contact.id %>, <%= contact.name %>, <%= contact.email %>, <%= contact.phone %>, <%= contact.note %>
+	<br>
+<% } %>
