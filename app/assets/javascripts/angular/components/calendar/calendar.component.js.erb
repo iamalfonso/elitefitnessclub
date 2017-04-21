@@ -1,0 +1,32 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('calendarItem', {
+		templateUrl: "<%= asset_path('angular/components/calendar/calendar-item.html') %>",
+		controller: calendarItemComponentController,
+		bindings: {
+			name: '@',
+			starts: '@',
+			duration: '@',
+			instructor: '@',
+			className: '@'
+		},		
+		transclude: true		
+	});
+
+	calendarItemComponentController.$inject = [];
+	function calendarItemComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+
+	};
+
+})();

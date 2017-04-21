@@ -16,5 +16,7 @@
 //= require bootstrap/dist/js/bootstrap.min
 //= require angular/angular.min
 //= require angular/efc
+//= require_tree ./angular/filters
+//= require_tree ./angular/services
 //= require_tree ./angular/components
 

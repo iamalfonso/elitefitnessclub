@@ -81,7 +81,7 @@
 	padding: 100px 0px;	
 }
 
-.membresias-part {
+.membresias-part, .calendario-part {
 	background-color: #252525;
 }
 
@@ -114,6 +114,8 @@
 	max-width: none;
 }
 
+/*GYM */
+
 .icon-gimnasio-segment {
 	width: 50px;
 	height: 50px;
@@ -136,6 +138,8 @@
 	color: #ffffff;
 	font-size: 2em;
 }
+
+/* MEMBERSHIPS */
 
 .pricing {
 	background-color: #CF3046;
@@ -166,6 +170,86 @@
 		color: #777777;
 	}
 }
+
+/* CLASSES */
+
+.classes-tile {	
+	height: 250px;
+	width: 100%;
+	position: relative;
+	border: 1px solid #CF3046;
+	overflow: hidden;
+	span {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		background-color: #CF3046;
+		color: #ffffff;
+		opacity: 0.8;		
+	}
+}
+
+.classes-text {
+	font-size: 1em;
+}
+
+.spinning-class {
+	background: image-url('spinning-thumbnail.png') no-repeat;
+	background-position: center;	
+}
+
+.zumba-class {
+	background: image-url('zumba-thumbnail.png') no-repeat;
+	background-position: center;	
+}
+
+.yoga-class {
+	background: image-url('yoga-thumbnail.png') no-repeat;
+	background-position: center;	
+}
+
+/* CALENDAR */
+
+.spinning-sch {
+	background-color: #3DC451;
+}
+
+.bodycombat-sch {
+	background-color: #C43D5A;
+}
+
+.white-calendar {
+	color: #ffffff;
+	th {
+		background-color: #CF3046;
+		padding: 5px 35px;
+		font-size: 1.4em;
+	} 
+	td {
+		font-size: 1.2em;
+		text-align: center;
+	}
+}
+
+.white-calendar .calendar-item {
+	.name {
+		font-size: 1em;
+	}
+	.starts {
+		font-size: 0.6em;
+	}
+	.duration {
+		font-size: 0.8em;
+	}
+	.instructor {
+		font-size: 0.6em;
+	}
+}
+
 
 /* MEDIA QUERIES */
 

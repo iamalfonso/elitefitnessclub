@@ -1,0 +1,20 @@
+<!-- Calendar -->
+<table class="{{ $ctrl.className }}">
+	<thead>
+		<tr>
+			<th ng-repeat="day in [] | range: 8" class="days-name">
+				{{ day > 1 ? $ctrl.days_of_week[day - 2] : "Hora" }}
+			</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr ng-repeat="hour in [] | range: 24" class="{{ $ctrl.className }}" ng-if="$ctrl.showHour(hour)">
+			<td>{{ $ctrl.utils.pad(hour, 2) + ":00"}}</td>
+			<td ng-repeat="day in [] | range: 7">
+				<div ng-repeat="curHour in $ctrl.getClassesForHour(hour, day - 1)">
+					<calendar-item name="{{ curHour.class }}" starts="{{ curHour.starts }}" duration="{{ curHour.duration }}" instructor="{{ curHour.instructor }}" class-name="{{ curHour.class | nospacedown }}-sch"></calendar-item>
+				</div>				
+			</td>
+		</tr>
+	</tbody>
+</table>

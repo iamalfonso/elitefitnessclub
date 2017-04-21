@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('calendarioSegment', {
+		templateUrl: "<%= asset_path('angular/components/calendario-segment/calendario-segment.html') %>",
+		controller: calendarioSegmentComponentController,
+		transclude: true		
+	});
+
+	calendarioSegmentComponentController.$inject = [];
+	function calendarioSegmentComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

@@ -1,21 +1,17 @@
 <!-- Membresias -->
-	<div class="container-fluid clases-part segment">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<span class="title-on-dark">Los planes que mejor se adaptan a tus necesidades</span>
+							<div class="classes-tile {{ $ctrl.classesImg }}">
+								<span>{{ $ctrl.classesName }}</span>
+							</div>	
+							<p><ng-transclude class="classes-text"></ng-transclude></p>						
 						</div>	<!-- Cell notfluid container -->						
 					</div> <!-- Row not fluid container -->					
-					<div class="row">
-						<div class="col-md-6">
-							<classes-item classes-img="spinning.png" classes-name="Spinning">
-								It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).						
-							</classes-item>
-						</div>	<!-- Cell notfluid container -->							
-					</div> <!-- Row not fluid container -->	
 				</div>	<!-- Not fluid container -->	
 
 			</div> <!-- Cell fluid container -->						
