@@ -1,14 +1,15 @@
+<div ng-controller="MainController as main">
 <header id="header">
 	<div class="container-fluid top-contact hidden-sm-down">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-sm-11">
-					<a href="tel:662-215-2035"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info">6622 15 20 35</span></a>
+					<a href="tel:+52-662-311-6341"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info">+52 662 311 6341</span></a>
 					<a href="mailto:contacto@efc.com.mx"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="info">contacto@efc.com.mx</span></a>
 					<i class="fa fa-clock-o hidden-sm-down" aria-hidden="true"></i> <span class="info">Abierto 05:00 - 22:00</span>
 				</div>		
 				<div class="col-sm-1 text-right">
-					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/www.efc.com.mx/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 				</div>					
 			</div><!-- row menu -->
 		</div>
@@ -21,11 +22,11 @@
 			<div class="col-sm-10 col-md-10 text-right hidden-sm-down">
 				<ul id="menu">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Gimnasio</a></li>
-					<li><a href="#">Membresías</a></li>
-					<li><a href="#">Clases</a></li>
-					<li><a href="#">Calendario</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li><a ng-click="main.scrollTo('gym')">Gimnasio</a></li>
+					<li><a ng-click="main.scrollTo('membresias')">Membresías</a></li>
+					<li><a ng-click="main.scrollTo('clases')">Clases</a></li>
+					<li><a ng-click="main.scrollTo('calendario')">Calendario</a></li>
+					<li><a ng-click="main.scrollTo('contacto')">Ubicación</a></li>
 				</ul>
 			</div>	
 			<div class="col-sm-10 col-md-10 text-right toggler-icon">
@@ -36,11 +37,11 @@
 			<div class="col-sm-12 hidden-md-up">
 				<ul id="mobile_menu">
 				<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Gimnasio</a></li>
-					<li><a href="#">Membresías</a></li>
-					<li><a href="#">Clases</a></li>
-					<li><a href="#">Calendario</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li><a href="#gym">Gimnasio</a></li>
+					<li><a href="#membresias">Membresías</a></li>
+					<li><a href="#clases">Clases</a></li>
+					<li><a href="#calendario">Calendario</a></li>
+					<li><a href="#contacto">Ubicación</a></li>
 				</ul>
 			</div>					
 		</div><!-- row mobile menu -->		
@@ -49,10 +50,26 @@
 
 <main-content></main-content>
 
-<gimnasio-segment></gimnasio-segment>			
+<gimnasio-segment id="gym"></gimnasio-segment>			
 
-<membresias-segment></membresias-segment>
+<membresias-segment id="membresias"></membresias-segment>
 
-<clases-segment></clases-segment>
+<clases-segment id="clases"></clases-segment>
 
-<calendario-segment></calendario-segment>
+<calendario-segment id="calendario"></calendario-segment>
+
+<contacto-segment id="contacto"></contacto-segment>
+
+<footer>
+	<div class="container-fluid footer-cr hidden-sm-down">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-sm-12">
+					<span></span>
+				</div>						
+			</div><!-- row -->
+		</div>
+	</div><!-- container -->
+</footer>
+
+</div>

@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('contactMap', {
+		templateUrl: "<%= asset_path('angular/components/contacto-segment/contact-map.html') %>",
+		controller: contactMapComponentController,
+		transclude: true		
+	});
+
+	contactMapComponentController.$inject = [];
+	function contactMapComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

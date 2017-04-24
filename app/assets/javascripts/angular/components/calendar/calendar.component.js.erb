@@ -2,22 +2,32 @@
 	'use strict';
 
 	angular.module('efc')
-	.component('calendarItem', {
-		templateUrl: "<%= asset_path('angular/components/calendar/calendar-item.html') %>",
-		controller: calendarItemComponentController,
+	.component('calendar', {
+		templateUrl: "<%= asset_path('angular/components/calendar/calendar.html') %>",
+		controller: calendarComponentController,
 		bindings: {
-			name: '@',
-			starts: '@',
-			duration: '@',
-			instructor: '@',
 			className: '@'
 		},		
 		transclude: true		
 	});
 
-	calendarItemComponentController.$inject = [];
-	function calendarItemComponentController() {
+	calendarComponentController.$inject = ['UtilsService'];
+	function calendarComponentController(UtilsService) {
 		var $ctrl = this;
+
+		$ctrl.utils = UtilsService;
+		
+		$ctrl.days_of_week = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+		$ctrl.schedule = {
+			5: [ [], [{ class: "Spinning", starts: "05:15", duration: 45, instructor: "Nora"}, { class: "Body Combat", starts: "05:30", duration: 45, instructor: "Karla"}], [{ class: "Spinning", starts: "05:15", duration: 45, instructor: "Nora"}, { class: "Body Combat", starts: "05:30", duration: 45, instructor: "Karla"}], [], [], [], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}] ],
+			6: [ [], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [ { class: "Body Combat", starts: "05:30", duration: 45, instructor: "Karla"}] ],
+			7: [ [], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Yoga", starts: "05:15", duration: 45, instructor: "Nora"}, { class: "Body Combat", starts: "05:30", duration: 45, instructor: "Karla"}] ],
+			16: [ [], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Spinning", starts: "05:15", duration: 45, instructor: "Nora"}] ],
+			17: [ [], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}], [{ class: "Spinning", starts: "06:00", duration: 45, instructor: "Gustavo"}] ]
+		}		
+		$ctrl.classesNames = [];
+
 
 		$ctrl.$onInit = function() {
 
@@ -26,6 +36,22 @@
 		$ctrl.$onChanges = function(changesObj) {
 
 		};	
+
+		$ctrl.getClassesForHour = function(hour, day) {
+			if ($ctrl.schedule.hasOwnProperty(hour)) {
+				return $ctrl.schedule[hour][day];
+			} else {
+				return [];
+			}
+		};
+
+		$ctrl.showHour = function(hour) {
+			if ($ctrl.schedule.hasOwnProperty(hour)) {
+				return true;
+			} else {
+				return false;
+			}
+		};
 
 	};
 

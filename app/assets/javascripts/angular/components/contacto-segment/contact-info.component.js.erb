@@ -1,0 +1,24 @@
+(function() {
+	'use strict';
+
+	angular.module('efc')
+	.component('contactInfo', {
+		templateUrl: "<%= asset_path('angular/components/contacto-segment/contact-info.html') %>",
+		controller: contactInfoComponentController,
+		transclude: true		
+	});
+
+	contactInfoComponentController.$inject = [];
+	function contactInfoComponentController() {
+		var $ctrl = this;
+
+		$ctrl.$onInit = function() {
+			
+		};	
+
+		$ctrl.$onChanges = function(changesObj) {
+
+		};	
+	};
+
+})();

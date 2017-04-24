@@ -75,6 +75,51 @@
 
 .carousel-part {
 	background-color: #252525;
+	background-image: image-url("bg-1.jpg");
+	height: 850px;
+}
+
+.main-container {
+	height: 700px;
+}
+
+.main-title1 {
+	font-size: 4em;
+	font-family: "Changa", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ffffff;
+	line-height: 1em;
+}
+
+.main-title2 {
+	font-size: 3.2em;
+	font-family: "Changa", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ce021f;
+}
+
+.main-text {
+	color: #dddddd;
+	font-size: 1.2em;
+}
+
+.main-try {
+	color: #ffffff;
+	font-size: 1.2em;
+	background-color: #ce021f;
+	border-radius: 7px;
+	width: 320px;
+	text-align: center;
+	font-weight: bold;
+	border-right: 3px solid #990016;
+	border-bottom: 3px solid #990016;
+}
+
+.main-scroll {
+	color: #cccccc;
+	font-size: 0.6em;
 }
 
 .segment {
@@ -85,7 +130,7 @@
 	background-color: #252525;
 }
 
-.gimnasio-part, .clases-part {
+.gimnasio-part, .clases-part, .contacto-part {
 	background-color: #ffffff;	
 	h2 {
 		font-size: 1.8em;
@@ -136,7 +181,20 @@
 
 .title-on-dark {
 	color: #ffffff;
-	font-size: 2em;
+	font-size: 2.4em;
+	font-weight: bold;
+	font-family: 'Changa', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 45px;
+}
+
+.title-on-light {
+	color: #252525;
+	font-size: 2.4em;
+	font-weight: bold;
+	font-family: 'Changa', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 45px;
 }
 
 /* MEMBERSHIPS */
@@ -216,10 +274,17 @@
 
 .spinning-sch {
 	background-color: #3DC451;
+	padding: 3px;
 }
 
 .bodycombat-sch {
 	background-color: #C43D5A;
+	padding: 3px;
+}
+
+.yoga-sch {
+	background-color: #549FB8;
+	padding: 3px;
 }
 
 .white-calendar {
@@ -227,15 +292,25 @@
 	th {
 		background-color: #CF3046;
 		padding: 5px 35px;
-		font-size: 1.4em;
+		font-size: 1em;
+		border: 1px solid #9E2435;
 	} 
 	td {
-		font-size: 1.2em;
+		font-size: 0.8em;
 		text-align: center;
+		background-color: #CCCCCC;
+		border: 1px solid #9E2435;
+		vertical-align: top;
+	}
+	.hour-label {
+		background-color: #CF3046;
+		color: #ffffff;
+		vertical-align: middle;
 	}
 }
 
 .white-calendar .calendar-item {
+	width: 140px;
 	.name {
 		font-size: 1em;
 	}
@@ -250,7 +325,31 @@
 	}
 }
 
+.map-tile {
+	border: 2px solid #CF3046;
+	width: 100%;
+	overflow: hidden;
+}
 
+.link-contact-fb {
+	a {
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.contact-hours {
+	td {
+		padding-right: 7px;
+	}	
+}
+
+address {
+	i {
+		color: #CF3046;
+	}
+}
 /* MEDIA QUERIES */
 
 /********** Large devices only **********/
