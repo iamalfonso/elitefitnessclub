@@ -226,6 +226,7 @@
 		background-color: #ffffff;
 		font-size: 0.8em;
 		color: #777777;
+		padding-bottom: 12px;
 	}
 }
 
@@ -294,6 +295,7 @@
 		padding: 5px 35px;
 		font-size: 1em;
 		border: 1px solid #9E2435;
+		text-align: center;
 	} 
 	td {
 		font-size: 0.8em;
@@ -306,6 +308,7 @@
 		background-color: #CF3046;
 		color: #ffffff;
 		vertical-align: middle;
+		padding: 2px 2px;
 	}
 }
 
@@ -325,6 +328,7 @@
 	}
 }
 
+/* CONTACT */
 .map-tile {
 	border: 2px solid #CF3046;
 	width: 100%;
@@ -352,31 +356,157 @@ address {
 }
 /* MEDIA QUERIES */
 
+/********** Extra Large devices only **********/
+@media (min-width: 1200px) {
+ 	
+}
+
+
 /********** Large devices only **********/
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   	#menu {
 	  	li {
-	  		font-size: 1.2em;  		
+	  		font-size: 0.6em;  		
+	  		margin: 0 2px;
 	  	}
   	}
+
+	.pricing {
+		font-size: 0.8em;
+		.pricing-items {
+			font-size: 0.7em;
+			padding-bottom: 6px;
+		}		
+		.pricing-tag {
+			font-size: 0.4em;
+		}
+	}  	
+
+	.white-calendar {
+		th {
+			padding: 5px 15px;
+			font-size: 0.8em;
+			border: 1px solid #9E2435;
+		} 
+		td {
+			font-size: 0.8em;
+			border: 1px solid #9E2435;
+		}
+	}
+
+	.white-calendar .calendar-item {
+		width: 120px;
+		.name {
+			font-size: 0.8em;
+		}
+		.starts {
+			font-size: 0.6em;
+		}
+		.duration {
+			font-size: 0.8em;
+		}
+		.instructor {
+			font-size: 0.6em;
+		}
+	}	
 }
 
 /********** Medium devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-	#menu {
-	  	li {
-	  		font-size: 1em;
-	  		margin: 0 2px;
-		  	&:hover {
-			  	padding: 5px 10px;
-		  	}		  		
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+	}	
+	#header {
+	  .top-contact{
+	  	padding: 7px 0px;
+	  	background-color: #ce021f;
+	  	color: #ffffff;
+	  	i {
+	  		font-size: 0.8em;
 	  	}
-	}
+	  	.info {
+	  		margin: 0px 10px 0px 5px;
+	  		font-size: 0.8em;
+	  	}
+	  }
+	}	
+
+	#menu {
+		li {
+		  	padding: 0 3px;
+		  	margin: 0 3px;
+		  	font-size: 0.6em;
+		  	&:hover {
+			  	padding: 3px 4px;
+		  	}
+		  	a {
+		  		font-size: 1.4em;	  		
+		  	}
+		}	
+		.active{
+			border-bottom: 3px solid #ce021f;
+			padding-bottom: 5px;
+		}		
+	}	 
+
 	#logo-img {
 		background: image-url("logo_medium.png") no-repeat;
 		width: 100px;
 		height: 60px;
 	}  
+
+	.pricing {
+		margin: 5px 0;
+		text-align: center;
+		.pricing-plan {
+			font-size: 1.5em;
+		}
+		.pricing-price {
+			font-size: 1.6em;
+		}
+		.pricing-list {
+			border-radius: 5px;
+			padding-bottom: 15px;
+			min-height: 150px;
+		}
+		.pricing-items {
+			font-size: 0.8em;
+		}
+		.pricing-tag {
+			font-size: 0.4em;
+		}
+	}	
+
+	.white-calendar {
+		th {
+			padding: 5px 5px;
+			font-size: 0.8em;
+			border: 1px solid #9E2435;
+		} 
+		td {
+			font-size: 0.6em;
+			border: 1px solid #9E2435;
+		}
+	}
+
+	.white-calendar .calendar-item {
+		width: 120px;
+		.name {
+			font-size: 0.8em;
+		}
+		.starts {
+			font-size: 0.6em;
+		}
+		.duration {
+			font-size: 0.8em;
+		}
+		.instructor {
+			font-size: 0.6em;
+		}
+	}	
 }
 
 /********** Small devices only **********/
@@ -397,11 +527,6 @@ address {
 			  	cursor: pointer;  		
 		  	}
 		}	
-		.active{
-			border-bottom: 2px solid #ce021f;
-			padding-bottom: 3px;
-			font-size: 1.2em;
-		}		
 	}
 	#mobile_menu_container {
 		display: none;
